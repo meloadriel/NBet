@@ -1,0 +1,99 @@
+.home {
+  display: flex;
+  align-items: center;
+  width: 100%;
+  height: 100vh;
+
+  background-color: #000;
+
+  position: relative;
+}
+
+.home__container {
+  min-width: 100%;
+
+  position: absolute;
+  right: 0;
+
+  transition: all 3s;
+}
+
+.home__container.current > .home__component > .home__img {
+  top: 50%;
+}
+
+.home__container.current > .home__component > .home__text > .home__quote {
+  left: 0%;
+}
+
+.home__container.current > .home__component > .home__text > .home__author {
+  right: 20rem !important;
+}
+
+.home__component {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  max-width: 1200px;
+  height: 100%;
+  margin: 0 auto;
+
+  position: relative;
+}
+
+.home__img {
+  width: 300px;
+  height: 500px;
+
+  background-size: 100%;
+  background-position: center;
+
+  position: absolute;
+  top: -300%;
+  transform: translateY(-50%);
+
+  transition: all 2s;
+}
+
+.home__text {
+  width: 85%;
+
+  position: relative;
+}
+
+.home__quote {
+  color: #fff;
+  line-height: 1;
+  font-size: 8rem;
+  font-weight: 300;
+  text-align: center;
+  text-transform: uppercase;
+
+  position: relative;
+  left: -150%;
+  transition: all 2s;
+}
+
+.home__author {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+
+  position: absolute;
+  right: -100% !important;
+  bottom: 0;
+  transition: all 2s;
+}
+
+.home__name,
+.home__number {
+  padding: 0.3rem 1rem;
+
+  border-radius: 2rem;
+  font-size: 1.2rem;
+  text-transform: uppercase;
+}
+
+.home__name {
+  background-color: #fff;
+}
